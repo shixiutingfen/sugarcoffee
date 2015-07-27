@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+<head>
+    
+    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;" />
+    <link rel="icon" href="/static/images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/png" />
+    <title>sugar coffee</title>
+
+    <!--Le Google Web Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Andada' rel='stylesheet' type='text/css' />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+{% include 'files.html' %}
+{% include 'nav.html' %}
+<section id="slider">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="/static/images/slides/slide3.jpg" />
+            </li>
+            <li>
+                <img src="/static/images/slides/slide2.jpg" />
+            </li>
+            <li>
+                <img src="/static/images/slides/slide1.jpg" />
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="container">
+    <div class="container">
+        <!--Recent Projects Block-->
+        <div class="row">
+            <div class="span3">
+                <h3>Recent Projects</h3>
+                <p class="hidden-phone">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut in lacus rhoncus elit egestas luctus. Nullam at lectus augue.
+                    Ut tristique consectetur elit, sed tincidunt elit iaculis in.
+                </p>
+                <a class="read-more hidden-phone" href="#">Read More...</a>
+            </div>
+            <div class="span9">
+                <div class="carousel btleft" id="latest-work">
+                    <div class="carousel-wrapper">
+                        <ul class="da-thumbs" style="width: 1800px; display: block; margin-left: 0px;">
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest1.jpg" />
+                                <div style="display: block;" class="da-animate da-slideFromLeft">
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest2.jpg" />
+                                <div>
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest3.jpg" />
+                                <div>
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest4.jpg" />
+                                <div>
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest5.jpg" />
+                                <div>
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 30px; width: 270px;">
+                                <img src="example/latest6.jpg" />
+                                <div>
+                                    <a data-rel="prettyPhoto" class="p-view" href="example/view.jpg" rel="prettyPhoto"></a>
+                                    <a class="p-link" href="blog-single.html"></a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="es-nav"><span class="es-nav-prev" style="opacity: 0.5;">Previous</span><span class="es-nav-next" style="opacity: 1;">Next</span></div></div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#latest-work').elastislide({
+                            imageW  : 270,
+                            margin  : 30
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="divider">
+            <img alt="" src="/static/images/div-bg.jpg" />
+        </div>
+        <!--3 columns block-->
+        <div class="row bottom30">
+            <div class="span4 features-block">
+                <img class="im-bottom" src="/static/images/icon1a.png" />
+                <img class="im-top" src="/static/images/icon1.png" />
+                <h3>Etia Molesti</h3>
+
+                <p>Pellentesque vel augue sit amet dui pharetra convallis. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.</p>
+                <button class="btn btn-read" type="button">read more</button>
+            </div>
+            <div class="span4 features-block">
+
+                <img class="im-bottom" src="/static/images/icon2a.png" />
+                <img class="im-top" src="/static/images/icon2.png" />
+                <h3>Sed Metus Lorem</h3>
+
+                <p>Pellentesque vel augue sit amet dui pharetra convallis. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.</p>
+                <button class="btn btn-read" type="button">read more</button>
+            </div>
+            <div class="span4 features-block">
+
+                <img class="im-bottom" src="/static/images/icon3a.png" />
+                <img class="im-top" src="/static/images/icon3.png" />
+                <h3>Vestibulum Ante</h3>
+
+                <p>Pellentesque vel augue sit amet dui pharetra convallis. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas.</p>
+                <button class="btn btn-read" type="button">read more</button>
+            </div>
+        </div>
+</div>
+</section>
+{% include 'footer.html' %}
+
+
+<script>
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+    });
+</script>
+
+</body>
+</html>
