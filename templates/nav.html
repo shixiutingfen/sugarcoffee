@@ -18,28 +18,46 @@
 <section id="main-menu">
     <nav class="container" id="menu">
         <ul>
-            <li><a href="./index.html" class="current">首页</a></li>
+            <li><a href="/home" id="home">首页</a></li>
             <li><a href="./about.html">小店服务</a>
                 <ul>
                     <li><a href="./about.html">店内环境</a></li>
                     <li class="last"><a href="./services.html">食品</a></li>
                 </ul>
             </li>
-            <li><a href="./portfolio4.html">画廊</a>
+            <li><a id="portfolio">画廊</a>
                 <ul>
-                    <li><a href="#">小店一角</a>
+                    <li><a href="/portfolio">小店一角</a>
                     </li>
-                    <li class="last"><a href="#">食物特写</a>
+                    <li ><a href="/portfolio">食物特写</a>
                     </li>
                 </ul>
             </li>
-            <li><a href="./blog.html">甜咖啡</a>
+            <li><a id="blog">甜咖啡</a>
                 <ul>
-                    <li><a href="./blog.html">心情小记</a></li>
-                    <li class="last"><a href="./blog-single.html">点评</a></li>
+                    <li><a href="/bloglist">心情小记</a></li>
+                    <li ><a href="/blogdetail">点评</a></li>
                 </ul>
             </li>
-            <li><a href="./contact.html">关于我们</a></li>
+            <li><a href="/about" id="about">关于我们</a></li>
         </ul>
     </nav>
 </section>
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var url=window.location.href;
+        var str=url.split("/");
+        var currentactive=str[3];
+        $("#menu > ul >li >a").removeClass("current");
+        if(currentactive=="about"){
+            $("#about").addClass('current');
+        }else if(currentactive=="home"){
+            $("#home").addClass('current');
+        }else if(currentactive=="portfolio"){
+            $("#portfolio").addClass('current');
+        }else if(currentactive=="bloglist" || currentactive=="blogdetail"){
+            $("#blog").addClass('current');
+        }    
+    });
+</script>
