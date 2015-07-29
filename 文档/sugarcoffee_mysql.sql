@@ -1,66 +1,63 @@
- alter table t_user modify column password varchar(40);
 --用户表
-create table t_user 
+create table c_user 
 (
 	userid int(19) not null primary key,
-	username varchar(20) ,
-	password varchar(40),
+	username varchar(20) not null,
+	password varchar(40) not null,
 	chinesename varchar(20) ,
 	email  varchar(25) ,
 	address varchar(50) ,
-	phone BIGINT(15) ,
-	mobile BIGINT(13),
+	phone int(15) ,
+	mobile int(13),
 	sex  int(1),
 	age  int(3),
-	qq BIGINT(12),
+	qq int(12),
+	headpic varchar(30),
 	logintimes int(5),
 	userlevel int(2)  ,
 	lastlogintime varchar(20),
 	createtime varchar(20)
 );
-insert into t_user (userid,username,password,chinesename) values (1,'shixiuting','123','石秀亭');
-insert into t_user (userid,username,password,chinesename) values (2,'yangsaifen','123','杨赛芬');
+
 --类目表
-create table t_catagory 
+create table c_catagory 
 (
 	catagoryid int(5)  not null primary key,
 	catagoryname varchar(20) ,
 	belongto  int(2),
-	isprivate int(1),
+	createtype int(1),
 	createuser int(19),
 	createtime varchar(20)
 );
 
-
+alter table c_catagoryref
+add constraint c_catagoryref_ibfk_1  foreign key (catagoryid) references c_catagory (catagoryid)
 --类目关联表
 
-create table t_catagoryref 
+create table c_catagoryref 
 (
 	refid int(15)  not null primary key,
 	catagoryid int(5) ,
-	relateid  varchar(20)
+	relateid  int(20)
 );
 
 
 
 --文章表
-create table t_article 
+create table c_article 
 (
 	articleid int(15)  not null primary key,
-	catagoryrelateid varchar(20),
 	title varchar(30),
 	content text,
+	pic varchar(30),
 	istop int(1),
-	isprivate int(1),
-	canread varchar(200),
-	updatetime varchar(20),
 	createuser int(19),
 	createtime varchar(20)
 );
 
 --附件表
 
-create table t_attach 
+create table c_attach 
 (
 	attachid int(19)  not null primary key,
 	relateid varchar(30),
@@ -72,10 +69,11 @@ create table t_attach
 
 
 --帮助提示表
-create table t_faq 
+create table c_faq 
 (
 	faqid int(19)  not null primary key,
-	catagoryid varchar(2),
+	faqtype varchar(2),
+	picture varchar(30),
 	title varchar(100),
 	content text,
 	readtimes int(8),
@@ -83,7 +81,7 @@ create table t_faq
 );
 
 --投票表
-create table t_vote 
+create table c_vote 
 (
 	voteid int(19)  not null primary key,
 	title varchar(100),
@@ -100,7 +98,7 @@ create table t_vote
 	createtime varchar(20)
 );
 --好友表
-create table t_friend
+create table c_friend
 (
 	friendid  int(19)  not null primary key,
 	friendusername varchar(20)  ,
