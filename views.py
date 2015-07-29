@@ -25,3 +25,11 @@ def bloglist():
 @app.route('/blogdetail')
 def blogdetail():
     return render_template("blog-single.html",title = 'blogdetail')
+
+@app.route('/login')
+def login():
+    return render_template("login.html",title = 'login')
+
+@app.route('/regiest')
+def regiest():
+    return render_template("regiest.html",title = 'regiest')
