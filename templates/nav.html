@@ -7,10 +7,17 @@
             </div>
             <div class="span5 offset7 login-form hidden-phone">
                 <form class="bs-docs-example form-inline pull-right" />
-                    
-                    <a href="/login"><button class="btn" type="button">登录</button></a>
-                    <a href="/regiest"><button class="btn" type="button">注册</button></a>
-                </form></div>
+                  {% if session['username'] %}
+                    Welcome, {{ session['username'] }}!
+                  {% endif %}
+                    <button type="button" id="loginBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
+                      登录
+                    </button>
+                    <button type="button" id="regiestBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#regiestModal">
+                      注册
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </header>
